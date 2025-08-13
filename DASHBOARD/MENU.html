@@ -7,37 +7,57 @@
     <link rel="stylesheet" href="CSS/MENU.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="IMAGES/LOGO_MICHES.png" />
-    <style>
-        /* Barra de navegación con efecto neón */
+   <style>
+    /* Barra de navegación con efecto neón */
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #111;
+        padding: 15px 0;
+        border-bottom: 2px solid #0ff;
+        flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
+    }
+
+    .nav-bar a {
+        position: relative;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        color: #0ff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 2px solid #0ff;
+        border-radius: 8px;
+        transition: 0.3s;
+        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+    }
+
+    .nav-bar a:hover {
+        background-color: #0ff;
+        color: #111;
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+    }
+
+    /* Estilos para móviles */
+    @media (max-width: 600px) {
         .nav-bar {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background-color: #111;
-            padding: 15px 0;
-            border-bottom: 2px solid #0ff;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
         }
 
         .nav-bar a {
-            position: relative;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            color: #0ff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            border: 2px solid #0ff;
-            border-radius: 8px;
-            transition: 0.3s;
-            box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+            display: block;
+            width: 90%;
+            text-align: center;
+            font-size: 1em;
+            padding: 12px;
         }
+    }
+</style>
 
-        .nav-bar a:hover {
-            background-color: #0ff;
-            color: #111;
-            box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
-        }
-    </style>
 </head>
 <body>
     <div class="menu-container">
@@ -107,3 +127,4 @@
     <script src="JAVA/MENU.js"></script>
 </body>
 </html>
+
